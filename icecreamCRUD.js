@@ -60,6 +60,16 @@ function deleteProduct() {
     function(err, res) {
       if (err) throw err;
       console.log(res.affectedRows + " products deleted!\n");
+      readProduct();
     }
   );
+}
+//-------------READ-------------------
+
+function readProduct() {
+  connection.query("SELECT * FROM iceCream", function(err, res) {
+    if (err) throw err;
+    console.log(res);
+    connection.end();
+  });
 }
