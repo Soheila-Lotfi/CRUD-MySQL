@@ -46,6 +46,20 @@ function updateProduct() {
     function(err, res) {
       if (err) throw err;
       console.log(res.affectedRows + " products updated!\n");
+      deleteProduct();
+    }
+  );
+}
+//----------------------DELETE---------------
+function deleteProduct() {
+  connection.query(
+    "DELETE FROM iceCream WHERE ?",
+    {
+      flavor: "vanilla"
+    },
+    function(err, res) {
+      if (err) throw err;
+      console.log(res.affectedRows + " products deleted!\n");
     }
   );
 }
