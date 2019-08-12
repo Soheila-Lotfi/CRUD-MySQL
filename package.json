@@ -1,0 +1,23 @@
+{
+  "name": "CRUD-MySQL",
+  "version": "1.0.0",
+  "description": "",
+  "main": "icecreamCRUD.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Soheila-Lotfi/CRUD-MySQL.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Soheila-Lotfi/CRUD-MySQL/issues"
+  },
+  "homepage": "https://github.com/Soheila-Lotfi/CRUD-MySQL#readme",
+  "dependencies": {
+    "mysql": "^2.17.1"
+  }
+}
