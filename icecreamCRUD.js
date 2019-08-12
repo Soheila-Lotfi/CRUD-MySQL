@@ -24,7 +24,28 @@ function CreateProduct() {
     },
     function(err, res) {
       if (err) throw err;
-      console.log(res.affectedRows + "");
+      console.log(res.affectedRows + " product inserted!\n");
+      updateProduct();
+    }
+  );
+}
+//------------------------------UPDATE-------------------
+function updateProduct() {
+  connection.query(
+    "UPDATE iceCream SET ? WHERE ?",
+    [
+      {
+        flavor: "vanilla",
+        price: 2.25,
+        quantity: 2
+      },
+      {
+        flavor: "strawberry"
+      }
+    ],
+    function(err, res) {
+      if (err) throw err;
+      console.log(res.affectedRows + " products updated!\n");
     }
   );
 }
